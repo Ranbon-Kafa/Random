@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+}
+
+header {
+    background-color: #cc0000;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#searchInput {
+    padding: 8px;
+    font-size: 16px;
+    width: 250px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+}
+
+.video {
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+    width: 300px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}

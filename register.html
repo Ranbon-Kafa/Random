@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Kayıt Ol</title>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="auth.js"></script>
+</head>
+<body>
+  <h2>Kayıt Ol</h2>
+  <input type="email" id="register-email" placeholder="E-posta"><br>
+  <input type="password" id="register-password" placeholder="Şifre"><br>
+  <button onclick="register()">Kayıt Ol</button>
+
+  <script>
+    function register() {
+      const email = document.getElementById("register-email").value;
+      const password = document.getElementById("register-password").value;
+      auth.createUserWithEmailAndPassword(email, password)
+        .then(() => {
+          alert("Kayıt başarılı! Giriş yapabilirsiniz.");
+          window.location.href = "login.html";
+        })
+        .catch(error => {
+          alert("Hata: " + error.message);
+        });
+    }
+  </script>
+</body>
+</html>
